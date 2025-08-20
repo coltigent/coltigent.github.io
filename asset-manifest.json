@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5a4553ad.css",
+    "main.js": "/static/js/main.e2d26899.js",
+    "static/js/453.d44048df.chunk.js": "/static/js/453.d44048df.chunk.js",
+    "static/media/about.jpg": "/static/media/about.a857f1056c3526d375b6.jpg",
+    "static/media/homeimage2.jpg": "/static/media/homeimage2.fcfdd0a14583ea632ff9.jpg",
+    "static/media/coltigent_office.jpg": "/static/media/coltigent_office.2311170baf02904737ac.jpg",
+    "static/media/aiImge.jpg": "/static/media/aiImge.da1d9f16a99b2a8a335d.jpg",
+    "static/media/se_img.jpg": "/static/media/se_img.513a5e150150ce54c8b8.jpg",
+    "static/media/uxuimg.jpg": "/static/media/uxuimg.db4d2ed1b72711d01982.jpg",
+    "static/media/web_dev.jpg": "/static/media/web_dev.203e988506fc4d3e00c4.jpg",
+    "static/media/data_e.jpg": "/static/media/data_e.235d898bf1200e30a9c3.jpg",
+    "static/media/cloud_img.jpg": "/static/media/cloud_img.c9f2d5fc8c14fb8511f3.jpg",
+    "static/media/custom3.jpg": "/static/media/custom3.12053d43aa261c226b69.jpg",
+    "static/media/itconsulting.jpg": "/static/media/itconsulting.f000e644518e0b5f5ed5.jpg",
+    "static/media/cloud3.webp": "/static/media/cloud3.d901561c0f8f86ee63ab.webp",
+    "static/media/logo_colt.jpg": "/static/media/logo_colt.2be3c10e392fcc864fb1.jpg",
+    "index.html": "/index.html",
+    "main.5a4553ad.css.map": "/static/css/main.5a4553ad.css.map",
+    "main.e2d26899.js.map": "/static/js/main.e2d26899.js.map",
+    "453.d44048df.chunk.js.map": "/static/js/453.d44048df.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a4553ad.css",
+    "static/js/main.e2d26899.js"
+  ]
+}
