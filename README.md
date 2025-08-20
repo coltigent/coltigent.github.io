@@ -1,183 +1,247 @@
-# Coltigent Technology Services - Official Website
+# Coltigent Technology Services - Modern Website
 
-A modern, responsive website for Coltigent Technology Services Pvt Ltd, showcasing our IT consulting, software development, and digital transformation solutions.
+A responsive, modern website for Coltigent Technology Services with beautiful animations, interactive effects, and production-ready features.
 
-## 🌟 Features
+## 🚀 Features
 
-- **Modern Design**: Clean, professional design with Bootstrap 5 and custom CSS
-- **Responsive**: Fully responsive design that works on all devices
+### ✨ Modern Design & Animations
+- **Loading Screen**: Beautiful Coltigent logo animation with progress bar
+- **Mouse Interactions**: Trail effects, click particles, and hover animations
+- **Smooth Animations**: AOS (Animate On Scroll) integration with custom animations
+- **Interactive Elements**: Hover effects, button animations, and micro-interactions
+
+### 📱 Fully Responsive
+- **Mobile-First Design**: Optimized for all screen sizes
+- **Touch-Friendly**: Responsive navigation and interactive elements
+- **Performance Optimized**: Animations disabled on mobile for better performance
+- **Cross-Browser Compatible**: Works on all modern browsers
+
+### 🎨 Visual Enhancements
+- **Hero Section**: Animated background with floating cards and particle effects
+- **Modern UI**: Clean, professional design with gradient backgrounds
+- **Social Media Integration**: Interactive social media links with tooltips
+- **Progress Indicators**: Modern scroll-to-top button with progress ring
+
+### 🔧 Technical Features
+- **React 18**: Latest React features and hooks
+- **Modern CSS**: CSS Grid, Flexbox, and custom properties
+- **Performance**: Optimized animations and lazy loading
 - **SEO Optimized**: Meta tags, structured data, and semantic HTML
-- **Fast Performance**: Optimized images, lazy loading, and efficient code
-- **Accessibility**: WCAG compliant with proper ARIA labels
-- **Contact Forms**: Integrated contact forms with Formspree
-- **Animations**: Smooth scroll animations with AOS library
-- **GitHub Pages Ready**: Configured for easy deployment
 
-## 🚀 Tech Stack
+## 🛠️ Technologies Used
 
-- **Frontend**: React 19, Bootstrap 5, CSS3
-- **Routing**: React Router DOM
-- **Animations**: AOS (Animate On Scroll)
-- **SEO**: React Helmet
-- **Forms**: Formspree integration
+- **Frontend**: React 18, JavaScript (ES6+)
+- **Styling**: CSS3, Bootstrap 5, Custom CSS
+- **Animations**: AOS (Animate On Scroll), CSS Animations
+- **Icons**: Font Awesome 6
+- **Build Tool**: Create React App
 - **Deployment**: GitHub Pages
-
-## 📋 Prerequisites
-
-- Node.js (v16 or higher)
-- npm or yarn package manager
-- Git
-
-## 🛠️ Installation & Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/coltigent/coltigent.github.io.git
-   cd coltigent.github.io
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm start
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:3000` to view the website.
 
 ## 📁 Project Structure
 
 ```
-coltigent.github.io/
-├── public/
-│   ├── index.html          # Main HTML file
-│   ├── manifest.json       # PWA manifest
-│   └── images/             # Static images
-├── src/
-│   ├── components/         # React components
-│   │   ├── Home.js         # Homepage component
-│   │   ├── About.js        # About page
-│   │   ├── Contact.js      # Contact page
-│   │   ├── Career.js       # Careers page
-│   │   ├── NotFound.js     # 404 page
-│   │   └── services/       # Service pages
-│   ├── layout/
-│   │   ├── Navbar.js       # Navigation component
-│   │   └── Footer.js       # Footer component
-│   ├── images/             # Component images
-│   ├── App.js              # Main App component
-│   ├── App.css             # Global styles
-│   └── index.js            # Entry point
-├── package.json            # Dependencies and scripts
-└── README.md              # This file
+src/
+├── components/
+│   ├── LoadingScreen.js          # Initial loading animation
+│   ├── MouseAnimation.js         # Mouse interaction effects
+│   ├── ScrollToTopButton.js      # Modern scroll-to-top button
+│   ├── Home.js                   # Main homepage
+│   ├── About.js                  # About page
+│   ├── Contact.js                # Contact page
+│   ├── Career.js                 # Career page
+│   ├── NotFound.js               # 404 page
+│   └── services/                 # Service pages
+│       ├── WebDevelopment.js
+│       ├── CloudService.js
+│       ├── DataEngineering.js
+│       ├── CustomSoftware.js
+│       ├── MediaService.js
+│       └── ITConsulting.js
+├── layout/
+│   ├── Navbar.js                 # Responsive navigation
+│   └── Footer.js                 # Footer with social links
+├── images/                       # Optimized images
+├── App.js                        # Main app component
+├── App.css                       # Global styles
+└── index.js                      # App entry point
 ```
+
+## 🎯 Key Components
+
+### LoadingScreen
+- Animated Coltigent logo with pulsing effect
+- Letter-by-letter company name animation
+- Progress bar with percentage display
+- Smooth fade-out transition
+
+### MouseAnimation
+- Mouse trail with gradient effects
+- Click particle animations
+- Hover circle effects
+- Performance optimized for mobile
+
+### Hero Section
+- Animated background with particles and grid
+- Floating service cards
+- Interactive buttons with shine effects
+- Responsive stats display
+
+### Navigation
+- Responsive mobile menu with hamburger animation
+- Smooth scroll effects
+- Active state indicators
+- Dropdown menus for services
+
+### Footer
+- Social media links with hover effects
+- Company information
+- Quick links and services
+- Contact details
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/coltigent/coltigent.github.io.git
+cd coltigent.github.io
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+The build folder will contain the optimized production files.
+
+## 📱 Responsive Breakpoints
+
+- **Desktop**: 1200px and above
+- **Tablet**: 768px - 1199px
+- **Mobile**: 320px - 767px
+- **Small Mobile**: Below 480px
 
 ## 🎨 Customization
 
 ### Colors
-The color scheme is defined in CSS variables in `src/App.css`:
+The website uses CSS custom properties for easy color customization:
+
 ```css
 :root {
   --primary-color: #0d6efd;
   --secondary-color: #6c757d;
-  /* ... other colors */
+  --success-color: #198754;
+  --info-color: #0dcaf0;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --white: #ffffff;
 }
 ```
 
-### Content
-- Update company information in respective components
-- Modify service descriptions in `src/components/Home.js`
-- Update contact information in `src/components/Contact.js`
-- Change images in `src/images/` directory
+### Animations
+Custom animation classes available:
+- `.fade-in-up`
+- `.slide-in-bottom`
+- `.zoom-in`
+- `.rotate-in`
+- `.bounce-in`
+- `.shake`
+- `.glow`
 
-### Styling
-- Global styles are in `src/App.css`
-- Component-specific styles can be added inline or in separate CSS files
-- Bootstrap classes are used for layout and components
+## 🔧 Performance Optimizations
 
-## 🚀 Deployment
+- **Lazy Loading**: Images and components loaded on demand
+- **CSS Optimization**: Minified and optimized styles
+- **Animation Performance**: Reduced motion support
+- **Mobile Optimization**: Disabled heavy animations on mobile
+- **Bundle Splitting**: Code splitting for better loading times
 
-### GitHub Pages Deployment
+## 📊 SEO Features
 
-1. **Build the project**
-   ```bash
-   npm run build
-   ```
+- **Meta Tags**: Comprehensive meta information
+- **Open Graph**: Social media sharing optimization
+- **Twitter Cards**: Twitter sharing optimization
+- **Structured Data**: Schema markup for better search results
+- **Sitemap**: XML sitemap for search engines
+- **Robots.txt**: Search engine crawling instructions
 
-2. **Deploy to GitHub Pages**
-   ```bash
-   npm run deploy
-   ```
+## 🌐 Social Media Integration
 
-3. **Configure GitHub Pages**
-   - Go to your repository settings
-   - Navigate to "Pages" section
-   - Select "gh-pages" branch as source
-   - Your site will be available at `https://coltigent.github.io`
+The website includes links to:
+- LinkedIn
+- Twitter
+- Facebook
+- Instagram
+- YouTube
 
-### Manual Deployment
-
-1. **Build the project**
-   ```bash
-   npm run build
-   ```
-
-2. **Upload build folder**
-   - Upload the contents of the `build/` folder to your web server
-   - Ensure your server is configured for single-page applications
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 🔧 Available Scripts
-
-- `npm start` - Start development server
-- `npm run build` - Build for production
-- `npm run test` - Run tests
-- `npm run deploy` - Deploy to GitHub Pages
-- `npm run eject` - Eject from Create React App
+All social media links have hover effects and tooltips.
 
 ## 📞 Contact Information
 
+- **Address**: Office #818, 8th Floor, Bramha SKY Uzuri (A Building), Opp. PCMC Corporation Building, Pimpri, Pune, Maharashtra - 411018
 - **Email**: info@coltigent.com
 - **Phone**: +91 123 456 7890
-- **Address**: Office #818, 8th Floor, Bramha SKY Uzuri (A Building), Opp. PCMC Corporation Building, Pimpri, Pune, Maharashtra - 411018
+- **Hours**: Mon - Fri: 9:00 AM - 6:00 PM IST
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## 🚀 Deployment
 
-- Bootstrap for the responsive framework
-- Font Awesome for icons
-- AOS library for scroll animations
-- React community for excellent documentation
+The website is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
-## 🔄 Updates & Maintenance
+### Manual Deployment
 
-- Regularly update dependencies for security patches
-- Monitor website performance using Google PageSpeed Insights
-- Keep content fresh and relevant
-- Test on different devices and browsers
+1. Build the project:
+```bash
+npm run build
+```
+
+2. Deploy to GitHub Pages:
+```bash
+npm run deploy
+```
+
+## 📈 Analytics
+
+The website is ready for Google Analytics integration. Add your tracking ID to enable analytics.
+
+## 🔒 Security
+
+- HTTPS enforced
+- Secure headers configured
+- XSS protection enabled
+- Content Security Policy implemented
 
 ---
 
-**Coltigent Technology Services Pvt Ltd** - Transforming businesses through innovative technology solutions.
+**Coltigent Technology Services** - Transforming Businesses Through Technology

@@ -28,15 +28,26 @@ const Footer = () => {
               Leading IT consulting, software development, and digital transformation solutions. 
               We specialize in web development, cloud computing, data engineering, and AI/ML integration.
             </p>
-            <div className="d-flex gap-3">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted">
+            <div className="social-links d-flex gap-3">
+              <a href="https://linkedin.com/company/coltigent" target="_blank" rel="noopener noreferrer" className="social-link">
                 <i className="fab fa-linkedin fa-lg"></i>
+                <span className="social-tooltip">Follow us on LinkedIn</span>
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted">
+              <a href="https://twitter.com/coltigent" target="_blank" rel="noopener noreferrer" className="social-link">
                 <i className="fab fa-twitter fa-lg"></i>
+                <span className="social-tooltip">Follow us on Twitter</span>
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted">
+              <a href="https://facebook.com/coltigent" target="_blank" rel="noopener noreferrer" className="social-link">
                 <i className="fab fa-facebook fa-lg"></i>
+                <span className="social-tooltip">Like us on Facebook</span>
+              </a>
+              <a href="https://instagram.com/coltigent" target="_blank" rel="noopener noreferrer" className="social-link">
+                <i className="fab fa-instagram fa-lg"></i>
+                <span className="social-tooltip">Follow us on Instagram</span>
+              </a>
+              <a href="https://youtube.com/@coltigent" target="_blank" rel="noopener noreferrer" className="social-link">
+                <i className="fab fa-youtube fa-lg"></i>
+                <span className="social-tooltip">Subscribe to our YouTube</span>
               </a>
             </div>
           </div>

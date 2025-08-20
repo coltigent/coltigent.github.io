@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../images/logo_colt.jpg';
+import ThemeToggle from '../components/ThemeToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,6 +24,21 @@ const Navbar = () => {
 
   const isActive = (path) => {
     return location.pathname === path;
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navbar = document.querySelector('.navbar');
+      const navbarHeight = navbar ? navbar.offsetHeight : 80;
+      const elementPosition = element.offsetTop - navbarHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+      closeMobileMenu();
+    }
   };
 
   return (
@@ -47,14 +63,16 @@ const Navbar = () => {
 
         {/* Mobile Toggle Button */}
         <button
-          className="navbar-toggler border-0"
+          className={`navbar-toggler border-0 ${isMobileMenuOpen ? 'active' : ''}`}
           type="button"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-controls="navbarContent"
           aria-expanded={isMobileMenuOpen}
           aria-label="Toggle navigation"
         >
-          <span className={`navbar-toggler-icon ${isMobileMenuOpen ? 'bg-white' : 'bg-white'}`}></span>
+          <span className="navbar-toggler-line"></span>
+          <span className="navbar-toggler-line"></span>
+          <span className="navbar-toggler-line"></span>
         </button>
 
         {/* Navbar Links */}
@@ -71,7 +89,37 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="nav-item dropdown">
+            <li className="nav-item">
+              <button
+                className="nav-link text-white border-0 bg-transparent"
+                onClick={() => scrollToSection('about')}
+              >
+                <i className="fas fa-info-circle me-1 d-md-none"></i>
+                About
+              </button>
+            </li>
+
+            <li className="nav-item">
+              <button
+                className="nav-link text-white border-0 bg-transparent"
+                onClick={() => scrollToSection('services')}
+              >
+                <i className="fas fa-cogs me-1 d-md-none"></i>
+                Services
+              </button>
+            </li>
+
+            <li className="nav-item">
+              <button
+                className="nav-link text-white border-0 bg-transparent"
+                onClick={() => scrollToSection('contact')}
+              >
+                <i className="fas fa-envelope me-1 d-md-none"></i>
+                Contact
+              </button>
+            </li>
+
+            <li className="nav-item dropdown d-none">
               <a
                 className="nav-link dropdown-toggle text-white"
                 href="#services"
@@ -81,7 +129,7 @@ const Navbar = () => {
                 aria-expanded="false"
               >
                 <i className="fas fa-cogs me-1 d-md-none"></i>
-                Services
+                Services (Old)
               </a>
               <ul className="dropdown-menu shadow-lg border-0" aria-labelledby="servicesDropdown">
                 <li>
@@ -132,28 +180,6 @@ const Navbar = () => {
 
             <li className="nav-item">
               <Link 
-                className={`nav-link text-white ${isActive('/about') ? 'active fw-bold' : ''}`} 
-                to="/about"
-                onClick={closeMobileMenu}
-              >
-                <i className="fas fa-info-circle me-1 d-md-none"></i>
-                About
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link 
-                className={`nav-link text-white ${isActive('/contact') ? 'active fw-bold' : ''}`} 
-                to="/contact"
-                onClick={closeMobileMenu}
-              >
-                <i className="fas fa-envelope me-1 d-md-none"></i>
-                Contact
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link 
                 className={`nav-link text-white ${isActive('/career') ? 'active fw-bold' : ''}`} 
                 to="/career"
                 onClick={closeMobileMenu}
@@ -161,6 +187,17 @@ const Navbar = () => {
                 <i className="fas fa-briefcase me-1 d-md-none"></i>
                 Careers
               </Link>
+            </li>
+
+            {/* Theme Toggle for Mobile */}
+            <li className="nav-item d-md-none">
+              <div className="nav-link text-white d-flex align-items-center justify-content-between">
+                <span>
+                  <i className="fas fa-palette me-1"></i>
+                  Theme
+                </span>
+                <ThemeToggle />
+              </div>
             </li>
 
             {/* CTA Button */}
@@ -172,6 +209,11 @@ const Navbar = () => {
               >
                 Get Started
               </Link>
+            </li>
+
+            {/* Theme Toggle */}
+            <li className="nav-item ms-lg-2 d-none d-md-block">
+              <ThemeToggle />
             </li>
           </ul>
         </div>

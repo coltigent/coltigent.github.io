@@ -1,0 +1,294 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 50%, #0a58ca 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-container {
+  text-align: center;
+  color: white;
+  max-width: 400px;
+  width: 90%;
+}
+
+/* Logo Animation */
+.logo-container {
+  position: relative;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.loading-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  animation: logoPulse 2s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.logo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  animation: logoGlow 3s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes logoGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+/* Company Name Animation */
+.company-name {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  animation: letterFadeIn 0.5s ease-out forwards;
+  transform: translateY(20px);
+}
+
+.letter:nth-child(1) { animation-delay: 0.1s; }
+.letter:nth-child(2) { animation-delay: 0.2s; }
+.letter:nth-child(3) { animation-delay: 0.3s; }
+.letter:nth-child(4) { animation-delay: 0.4s; }
+.letter:nth-child(5) { animation-delay: 0.5s; }
+.letter:nth-child(6) { animation-delay: 0.6s; }
+.letter:nth-child(7) { animation-delay: 0.7s; }
+.letter:nth-child(8) { animation-delay: 0.8s; }
+.letter:nth-child(9) { animation-delay: 0.9s; }
+
+@keyframes letterFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tagline */
+.loading-tagline {
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: taglineFadeIn 1s ease-out 1s forwards;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+@keyframes taglineFadeIn {
+  to {
+    opacity: 0.8;
+  }
+}
+
+/* Progress Bar */
+.progress-container {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* Loading Dots */
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+.dot:nth-child(3) { animation-delay: 0s; }
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .loading-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .logo-glow {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .company-name {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .loading-tagline {
+    font-size: 1rem;
+  }
+  
+  /* Optimize animations for mobile */
+  .loading-logo {
+    animation: logoPulseMobile 2s ease-in-out infinite;
+  }
+  
+  .logo-glow {
+    animation: logoGlowMobile 3s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logo-glow {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .company-name {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .loading-container {
+    max-width: 300px;
+  }
+  
+  /* Further optimize for small screens */
+  .loading-dots {
+    gap: 6px;
+  }
+  
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* Mobile-optimized animations */
+@media (max-width: 768px) {
+  @keyframes logoPulseMobile {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes logoGlowMobile {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  .loading-logo,
+  .logo-glow,
+  .letter,
+  .loading-tagline,
+  .progress-fill,
+  .dot {
+    animation: none;
+    transition: none;
+  }
+  
+  .letter {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .loading-tagline {
+    opacity: 0.8;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .loading-screen {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
